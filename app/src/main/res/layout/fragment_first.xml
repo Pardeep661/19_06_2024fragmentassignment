@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FirstFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <EditText
+        android:id="@+id/fragment_Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Username"/>
+</LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fragment_pass_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pass_Value"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fragment_inc_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="Increment"/>
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/fragment_Reset_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="Reset"/>
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/fragment_dec_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="decrement"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
