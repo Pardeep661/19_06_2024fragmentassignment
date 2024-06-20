@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,28 +11,31 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginTop="30dp"
     >
 
     <EditText
         android:id="@+id/fragment_Username"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:hint="Username"/>
+        android:hint="@string/username"/>
 </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/fragment_pass_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pass_Value"
+        android:text="@string/pass_value"
         android:layout_gravity="center"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/fragment_inc_btn"
@@ -39,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:text="Increment"/>
+            android:text="@string/increment"/>
 
           <com.google.android.material.button.MaterialButton
             android:id="@+id/fragment_Reset_btn"
@@ -47,16 +51,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:text="Reset"/>
+            android:text="@string/reset"/>
 
-          <com.google.android.material.button.MaterialButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/fragment_dec_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="10dp"
-            android:text="decrement"/>
-
+            android:layout_weight="1"
+            android:text="@string/decrement" />
 
 
     </LinearLayout>

@@ -1,10 +1,13 @@
 package com.pardeep.a19_06_2024_fragment_assignment
 
+import android.content.Context
+import android.icu.text.CompactDecimalFormat.CompactStyle
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import com.pardeep.a19_06_2024_fragment_assignment.databinding.FragmentFirstBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -47,12 +50,22 @@ class FirstFragment : Fragment(), changeButtonText {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.fragmentPassButton?.setOnClickListener {
-            var frag_username_data = binding?.fragmentUsername?.text?.trim().toString()
+            val frag_username_data = binding?.fragmentUsername?.text?.trim().toString()
             mainActivity?.changeButtonText(frag_username_data)
         }
+        // increment button
         binding?.fragmentIncBtn?.setOnClickListener{
-            mainActivity?.changeCounterData()
+            mainActivity?.incrementData()
         }
+
+        // decrement button
+        binding?.fragmentDecBtn?.setOnClickListener {
+            mainActivity?.decrementData()
+        }
+        binding?.fragmentResetBtn?.setOnClickListener {
+            mainActivity?.resetData()
+        }
+
     }
 
     companion object {
@@ -75,7 +88,21 @@ class FirstFragment : Fragment(), changeButtonText {
             }
     }
 
-    override fun fragmentButtonText() {
-
+    override fun fragmentEditText(et_data: String) {
+        binding?.fragmentUsername?.setText(et_data)
     }
+
+    override fun fragmentRedColor() {
+        binding?.llFragment?.setBackgroundColor(ContextCompat.getColor(requireContext(),R.color.Red))
+    }
+
+    override fun fragmentBlueColor() {
+        binding?.llFragment?.setBackgroundColor(ContextCompat.getColor(requireContext(),R.color.Blue))
+    }
+
+    override fun fragmentGreenColor() {
+        binding?.llFragment?.setBackgroundColor(ContextCompat.getColor(requireContext(),R.color.Green))
+    }
+
+
 }

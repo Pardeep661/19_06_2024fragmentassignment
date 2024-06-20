@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="20dp"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,6 +24,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="3"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -31,39 +33,38 @@
                 android:id="@+id/red_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:text="Red" />
+                android:layout_margin="10dp"
+                android:text="@string/red" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/green_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:text="green" />
+                android:layout_margin="10dp"
+                android:text="@string/green" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/blue_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:text="Blue" />
+                android:layout_margin="10dp"
+                android:text="@string/blue" />
         </LinearLayout>
 
         <EditText
             android:id="@+id/act_username"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:hint="Username"
+            android:hint="@string/username"
             android:minHeight="48dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/Activity_Pass_btn"
@@ -71,8 +72,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
-                android:layout_weight="1"
-                android:text="Pass" />
+                android:layout_gravity="center"
+                android:text="@string/pass" />
 
             <EditText
                 android:id="@+id/act_counter"
@@ -80,9 +81,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
-                android:layout_weight="1"
+                android:layout_gravity="center"
                 android:minHeight="48dp"
-                android:text="0" />
+                android:text="@string/_0" />
 
 
         </LinearLayout>
@@ -98,4 +99,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

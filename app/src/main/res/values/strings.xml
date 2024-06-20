@@ -2,4 +2,14 @@
     <string name="app_name">19_06_2024-fragment-assignment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="decrement">Decrement</string>
+    <string name="reset">Reset</string>
+    <string name="increment">Increment</string>
+    <string name="pass_value">Pass_Value</string>
+    <string name="username">Username</string>
+    <string name="red">Red</string>
+    <string name="green">green</string>
+    <string name="blue">Blue</string>
+    <string name="pass">Pass</string>
+    <string name="_0">0</string>
 </resources>

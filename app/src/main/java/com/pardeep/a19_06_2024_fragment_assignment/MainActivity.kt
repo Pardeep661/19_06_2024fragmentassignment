@@ -19,25 +19,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding?.root)
 
         binding?.redButton?.setOnClickListener {
-            activityInterface?.fragmentButtonText()
+            activityInterface?.fragmentRedColor()
         }
 
         binding?.blueButton?.setOnClickListener {
-            activityInterface?.fragmentButtonText()
+            activityInterface?.fragmentBlueColor()
         }
 
         binding?.greenButton?.setOnClickListener {
-            activityInterface?.fragmentButtonText()
+            activityInterface?.fragmentGreenColor()
         }
         binding?.ActivityPassBtn?.setOnClickListener {
-            activityInterface?.fragmentButtonText()
+            val et_data = binding?.actUsername?.text?.trim().toString()
+            activityInterface?.fragmentEditText(et_data)
         }
-        binding?.actCounter?.setOnClickListener {
-
-            activityInterface?.fragmentButtonText()
-        }
-
-
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -51,12 +46,26 @@ class MainActivity : AppCompatActivity() {
         binding?.actUsername?.setText(text)
     }
 
-    fun changeCounterData() {
-        var counter_data = binding?.actCounter?.text?.trim().toString()
-        var int_data = counter_data.toInt()
-        var inc_data = int_data +1
-        binding?.actCounter?.setText(inc_data)
+    fun incrementData() {
+
+            val counter_data = binding?.actCounter?.text?.trim().toString()
+            val int_data = counter_data.toInt()
+            val inc_data = int_data + 1
+            binding?.actCounter?.setText("${inc_data}")
+        }
+
+    fun decrementData() {
+        val counter_data = binding?.actCounter?.text?.trim().toString()
+        val int_data = counter_data.toInt()
+        if (int_data == 0 ) {
+        binding?.actCounter?.setText("0")
+    }else{
+            val dec_data = int_data - 1
+            binding?.actCounter?.setText(dec_data.toString())
+        }
+}
+
+    fun resetData() {
+        binding?.actCounter?.setText("0")
     }
-
-
 }
