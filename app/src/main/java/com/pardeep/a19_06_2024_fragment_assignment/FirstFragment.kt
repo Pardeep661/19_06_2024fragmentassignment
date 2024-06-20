@@ -39,7 +39,7 @@ class FirstFragment : Fragment(), changeButtonText {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first, container, false)
+       // return inflater.inflate(R.layout.fragment_first, container, false)
         binding = FragmentFirstBinding.inflate(layoutInflater)
         return binding?.root
     }
@@ -49,6 +49,9 @@ class FirstFragment : Fragment(), changeButtonText {
         binding?.fragmentPassButton?.setOnClickListener {
             var frag_username_data = binding?.fragmentUsername?.text?.trim().toString()
             mainActivity?.changeButtonText(frag_username_data)
+        }
+        binding?.fragmentIncBtn?.setOnClickListener{
+            mainActivity?.changeCounterData()
         }
     }
 

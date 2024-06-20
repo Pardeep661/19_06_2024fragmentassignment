@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             activityInterface?.fragmentButtonText()
         }
         binding?.actCounter?.setOnClickListener {
+
             activityInterface?.fragmentButtonText()
         }
 
@@ -46,8 +47,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun changeButtonText(frag_username_data: String) {
-        binding?.actUsername?.setText("${frag_username_data}")
+    fun changeButtonText(text:String) {
+        binding?.actUsername?.setText(text)
+    }
+
+    fun changeCounterData() {
+        var counter_data = binding?.actCounter?.text?.trim().toString()
+        var int_data = counter_data.toInt()
+        var inc_data = int_data +1
+        binding?.actCounter?.setText(inc_data)
     }
 
 
