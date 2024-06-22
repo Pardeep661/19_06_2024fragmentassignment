@@ -50,8 +50,12 @@ class FirstFragment : Fragment(), changeButtonText {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.fragmentPassButton?.setOnClickListener {
-            val frag_username_data = binding?.fragmentUsername?.text?.trim().toString()
-            mainActivity?.changeButtonText(frag_username_data)
+            if(binding?.fragmentUsername?.text?.trim().isNullOrEmpty()){
+                binding?.fragmentUsername?.error = "Enter username"
+            }else {
+                val frag_username_data = binding?.fragmentUsername?.text?.trim().toString()
+                mainActivity?.changeButtonText(frag_username_data)
+            }
         }
         // increment button
         binding?.fragmentIncBtn?.setOnClickListener{

@@ -30,8 +30,12 @@ class MainActivity : AppCompatActivity() {
             activityInterface?.fragmentGreenColor()
         }
         binding?.ActivityPassBtn?.setOnClickListener {
-            val et_data = binding?.actUsername?.text?.trim().toString()
-            activityInterface?.fragmentEditText(et_data)
+            if (binding?.actUsername?.text?.trim().isNullOrEmpty()) {
+                binding?.actUsername?.error = "enter username"
+            } else {
+                val et_data = binding?.actUsername?.text?.trim().toString()
+                activityInterface?.fragmentEditText(et_data)
+            }
         }
 
 

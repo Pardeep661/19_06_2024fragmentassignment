@@ -34,6 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/Red"
                 android:text="@string/red" />
 
             <com.google.android.material.button.MaterialButton
@@ -41,6 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/Green"
                 android:text="@string/green" />
 
             <com.google.android.material.button.MaterialButton
@@ -48,6 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/Blue"
                 android:text="@string/blue" />
         </LinearLayout>
 
@@ -94,7 +97,6 @@
         android:name="com.pardeep.a19_06_2024_fragment_assignment.FirstFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
